@@ -15,7 +15,7 @@ const corsOptions = {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
 app.use(cors(corsOptions))
 
 app.delete('/deleteproduct/:id', (req, res) => {
